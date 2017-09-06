@@ -1,0 +1,26 @@
+html {
+  height: 100%;
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Open Sans';
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  height: 100%;
+  width: 20%;
+  background-color: rgba(122, 118, 95, 0.3);
+  padding: 2rem;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.navbar h1 {
+  margin-bottom: 50px;
+
+}
