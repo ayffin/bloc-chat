@@ -1,8 +1,10 @@
 <section ng-controller='HomeCtrl as home'>
   <div class="navbar">
     <h1>Bloc Chat</h1>
-    <h3 ng-repeat='room in home.rooms track by $index'>
-      Room {{$index + 1}}
+    <h3 ng-repeat='room in home.rooms'>
+      <ul>
+        <li>{{room.$value}}</li>
+      </ul>
 
     </h3>
 
