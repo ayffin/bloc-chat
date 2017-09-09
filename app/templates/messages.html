@@ -1,0 +1,30 @@
+<section class="container" ng-controller='HomeCtrl as home'>
+
+  <div class="header">
+    <h1>{{activeRoom.$value | uppercase}}</h1>
+  </div>
+
+  <div class="message-wrap" ng-repeat='m in messages'>
+
+    <div class="message-info">
+
+        <span class="timestamp">{{ m.sentAt | date:'short' }}</span>
+
+      <div class="message">
+       {{m.content}}
+      </div>
+    </div>
+  </div>
+
+
+    <form class="message-form" >
+
+      <div class="input-group">
+        <input type="text" class="form-control"  placeholder="Type a message...">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="submit">Send</button>
+        </span>
+      </div>
+
+    </form>
+</section>

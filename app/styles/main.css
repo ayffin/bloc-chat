@@ -1,5 +1,4 @@
 html {
-  height: 100%;
   font-size: 100%;
 }
 
@@ -7,12 +6,193 @@ body {
   font-family: 'Open Sans';
   margin: 0;
   padding: 0;
+  line-height: 1rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  min-width: 768px;
+  font-size: 16px;
+  height: 100%;
 }
 
-.navbar {
+.page-header {
+  max-width: 450px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 5px;
+  text-shadow: 6px 6px 11px rgba(173, 176, 157, 0.69);
+}
+
+.main {
+  /*position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;*/
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sidebar {
+  /*display: flex;
+  width: 20%;
+  vertical-align: top;
+  height: 100%;
+  background: #4d394b;
+  position: relative;
+  /*overflow-y: scroll;*/
+  /*padding-bottom: 100px;*/
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 220px;
+  flex-shrink: 0;
+  min-width: 1px;
+  max-width: 260px;
+  z-index: 201;
+  background-color: rgb(77, 57, 75);
+  box-sizing: content-box;
+  visibility: visible;
+}
+
+.sidebar .name {
+  background: #3E313C;
+  padding: 15px 0px 15px 15px;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #fff;
+  border-bottom: 1px solid #4d394b;
+  position: relative;
+  z-index: 50;
+  flex-basis: 61px;
+  flex-shrink: 0;
+}
+
+
+/*.sidebar .name h1 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}*/
+
+.sidebar .room-list {
+  display: flex;
+  flex-direction: column;
+  /*overflow: hidden;*/
+  color: #ab9ba9;
+  /*width: 220px;*/
+  float: left;
+  position: relative;
+  flex-grow: 1 1 0%;
+  background-color: #4d394b;
+}
+
+.sidebar .room-list ul {
+  cursor: alias;
+  /*display: block;*/
+  color: rgba(255, 255, 255, 0.6);
+  padding: 3px 0px 3px 15px;
+  /*width: 90%;*/
+  font-weight: 300;
+  /*-webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;*/
+}
+
+.sidebar .room-list ul:hover {
+  text-decoration: none;
+  background: #3E313C;
+}
+
+.sidebar .room-list ul.selected {
+  background: #4c9689;
+  color: #fff;
+  text-decoration: none !important;
+}
+
+.sidebar .room-list .create {
+  font-style: italic;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 1px;
+}
+
+.container .header {
+  /*text-align: center;
+  margin-top: 20px;*/
+  flex-basis: 53px;
+  z-index: 201;
+  display: flex;
+  background: #fff;
+  padding-top: .7rem;
+  height: 100%;
+  box-shadow: inset 1px 0 0 0 #ebebeb;
+}
+
+.container .header h1 {
+  /*padding: 12px 0 10px 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 24px;*/
+  display: flex;
+  color: #717274;
+  min-width: 1px;
+  font-weight: 900;
+}
+
+.container .message-form {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 0 15px 15px 0;
+  background: #fff;
+  width: 79%;
+}
+
+.container .message-wrap {
+  margin-left: 0;
+  position: relative;
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  min-width: 1px;
+  box-shadow: inset 1px 0 0 0 #E8E8E8;
+  margin-top: 15px;
+  border-right: .25rem solid transparent;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.container .message-wrap .message-info {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 5px;
+}
+
+.container .message-wrap .message-info span {
+  color: #ccc;
+  font-weight: normal;
+  font-size: 10px;
+}
+
+
+/*.navbar {
   height: 100%;
   width: 20%;
-  background-color: rgba(122, 118, 95, 0.3);
+  background-color: rgba(34, 89, 103, 0.54);
   padding: 2rem;
   position: fixed;
   z-index: 1;
@@ -23,3 +203,39 @@ body {
 .navbar h1 {
   margin-bottom: 50px;
 }
+
+.container {
+  height: 100%;
+  width: 75%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(34, 89, 103, 0.23);
+  /*z-index: 100;*/
+
+
+/*}*/
+
+
+/*.panel {
+  position: fixed;
+  bottom: 0;
+  padding: 20px;
+  margin: auto;
+  /*z-index: 100;*/
+
+
+/*}
+.room-name {
+  margin-top: 0;
+  padding: 20px;
+  text-align: center;
+  text-shadow: 0 0 3px #FF9ee0, 0 0 5px #cc00ee;
+  background-color: rgba(34, 89, 103, 0.54);
+}
+.panel .messages {
+  right: 0;
+  margin-top: 2px;
+  font-size: 16px;
+  text-align: right;
+}*/
