@@ -4,17 +4,16 @@
     <h1>{{activeRoom.$value | uppercase}}</h1>
   </div>
 
-  <div class="message-wrap" ng-repeat='m in messages'>
+  <ul class="message-wrap" ng-repeat='m in messages'>
 
-    <div class="message-info">
+    <li class="message-info">
 
         <span class="timestamp">{{ m.sentAt | date:'short' }}</span>
 
-      <div class="message">
-       {{m.content}}
-      </div>
-    </div>
-  </div>
+      <p class="message">{{m.content}}</p>
+      <h4 class="username">{{m.user}}</h4>
+    </li>
+  </ul>
 
 
     <form class="message-form" >
