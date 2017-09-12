@@ -1,12 +1,12 @@
 (function() {
   function ModalInstanceCtrl($uibModalInstance) {
+    var modalInstance = this;
+    modalInstance.submit = function() {
 
-    this.submit = function() {
-
-      $uibModalInstance.close(this.room);
+      $uibModalInstance.close(modalInstance.room);
     };
 
-    this.cancel = function() {
+    modalInstance.cancel = function() {
       $uibModalInstance.dismiss('cancel');
     };
   }

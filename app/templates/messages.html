@@ -4,22 +4,23 @@
     <h1>{{activeRoom.$value | uppercase}}</h1>
   </div>
 
-  <ul class="message-wrap" ng-repeat='m in messages'>
+  <ul class="message-wrap" ng-repeat='message in messages'>
 
     <li class="message-info">
+<h4 class="username">{{message.username}}</h4>
+<p class="message">{{message.content}}</p>
+        <span class="timestamp">{{ message.sentAt | date:'short' }}</span>
 
-        <span class="timestamp">{{ m.sentAt | date:'short' }}</span>
 
-      <p class="message">{{m.content}}</p>
-      <h4 class="username">{{m.user}}</h4>
+
     </li>
   </ul>
 
 
-    <form class="message-form" >
+    <form class="message-form" ng-submit="home.send(home.message, activeRoom)">
 
       <div class="input-group">
-        <input type="text" class="form-control"  placeholder="Type a message...">
+        <input type="text" class="form-control" ng-model="home.message" placeholder="Type a message...">
         <span class="input-group-btn">
           <button class="btn btn-default" type="submit">Send</button>
         </span>
