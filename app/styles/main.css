@@ -178,3 +178,24 @@ body {
   color: #fff;
   background-color: rgba(61, 100, 158, .2);
 }
+
+@media screen and (min-width: 1280px) {
+  .sidebar {
+    width: 800px;
+    float: left;
+  }
+  .container {
+    margin-left: 100px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .sidebar {
+    width: 30px;
+    font-size: 10px;
+    box-sizing: content-box;
+  }
+  .container {
+    margin-left: 5px;
+  }
+}

@@ -11,6 +11,22 @@
     <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
+  <nav class="navbar">
+    <!-- navigation bar -->
+    <a ui-sref="index" class="logo">
+      Bloc Chat
+    </a>
+    <div class="links-container">
+      <a ui-sref="login" class="navbar-link">login</a>
+      <a ui-sref="register" class="navbar-link">register</a>
+
+    </div>
+
+  </nav>
+  <div class="userinfo" ng-show='currentUser' ng-controller='RegisterCtrl'>
+    <span > {{currentUser.firstname}}</span>
+
+  </div>
   <ui-view></ui-view>
 
 <!-- Angular -->
@@ -56,5 +72,8 @@
 <script src="/scripts/services/cookies.js"></script>
 <script src="/scripts/services/Rooms.js"></script>
 <script src="/scripts/services/Messages.js"></script>
+<script src="/scripts/controllers/RegisterCtrl.js"></script>
+<script src="/scripts/services/Auth.js"></script>
+
 </body>
 </html>
